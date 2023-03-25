@@ -14,15 +14,15 @@ Experimental Nintendo DS emulator based on [NooDS](https://github.com/hydr8gon/n
 </span>
 
 ## Android
-View the Android [README](README-ANDROID.md).
+View the Android [README](README/ANDROID.md).
 
 <span>
   <img src="https://img.shields.io/static/v1?label=Built%20with&message=Kotlin&color=blueviolet"/>
   <img src="https://img.shields.io/static/v1?label=Supports&message=Android 12%2B&color=green"/>
 </span>
 
-## iOS
-View the iOS [README](README-IOS.md).
+## Apple
+View the Apple [README](README/APPLE.md).
 
 <span>
   <img src="https://img.shields.io/static/v1?label=Built%20with&message=Objective-C%2B%2B&color=blue"/>
@@ -31,7 +31,7 @@ View the iOS [README](README-IOS.md).
 </span>
 
 ## Windows
-View the Windows [README](README-WINDOWS.md).
+View the Windows [README](README/WINDOWS.md).
 
 <span>
   <img src="https://img.shields.io/static/v1?label=Supports&message=Windows 10%2B&color=green"/>

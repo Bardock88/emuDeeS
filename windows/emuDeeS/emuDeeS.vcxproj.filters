@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\bios">
+      <UniqueIdentifier>{64686108-3795-478b-a0a6-3d7373409036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cartridge">
+      <UniqueIdentifier>{40acc80e-d485-416b-bca0-59d82d8b7169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{3496b76f-b39d-4728-9540-50ba2c195990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cp15">
+      <UniqueIdentifier>{b6df1f77-6fda-4c49-961e-97a3f1d37716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dma">
+      <UniqueIdentifier>{b5e136d3-04b7-4086-aad8-928ad71c4ce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gpu">
+      <UniqueIdentifier>{4cc50fff-88c1-408e-a8e7-4a056f9b4ac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\input">
+      <UniqueIdentifier>{89a0873c-5262-42d9-9d0d-8e7d64ae840b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\interpreter">
+      <UniqueIdentifier>{040c0d2d-ca3d-4daf-b2e5-b6a223a495b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\memory">
+      <UniqueIdentifier>{385c26f7-2a2a-485c-8559-29400e6a8c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\rtc">
+      <UniqueIdentifier>{3a5e0d5a-1535-4995-9539-0616d44707b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\spi">
+      <UniqueIdentifier>{11b046ca-9798-4ac8-a851-8c82187c7b7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\spu">
+      <UniqueIdentifier>{78e7ec57-95fe-47d5-9c12-caffef907d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\timers">
+      <UniqueIdentifier>{e5c51b03-2de0-4670-afb7-5382656547e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wifi">
+      <UniqueIdentifier>{fe3c3722-329a-404c-a8bc-70f18933c1ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dldi">
+      <UniqueIdentifier>{b38aee53-b8c0-4767-9b75-a5f67325a98d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ipc">
+      <UniqueIdentifier>{35d0d822-99d8-4e96-b23a-c0551563bd66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{bd968ed7-3598-43e7-bbe0-f6d1c4a61a3b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="emuDeeS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\bios.cpp">
+      <Filter>Source Files\bios</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\cartridge.cpp">
+      <Filter>Source Files\cartridge</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\core.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\cp15.cpp">
+      <Filter>Source Files\cp15</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\div_sqrt.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\dldi.cpp">
+      <Filter>Source Files\dldi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\dma.cpp">
+      <Filter>Source Files\dma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu.cpp">
+      <Filter>Source Files\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu_2d.cpp">
+      <Filter>Source Files\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu_3d.cpp">
+      <Filter>Source Files\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu_3d_renderer.cpp">
+      <Filter>Source Files\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\input.cpp">
+      <Filter>Source Files\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter.cpp">
+      <Filter>Source Files\interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter_alu.cpp">
+      <Filter>Source Files\interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter_branch.cpp">
+      <Filter>Source Files\interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter_transfer.cpp">
+      <Filter>Source Files\interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\ipc.cpp">
+      <Filter>Source Files\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\memory.cpp">
+      <Filter>Source Files\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\rtc.cpp">
+      <Filter>Source Files\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\nds_icon.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\spi.cpp">
+      <Filter>Source Files\spi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\spu.cpp">
+      <Filter>Source Files\spu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\timers.cpp">
+      <Filter>Source Files\timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\wifi.cpp">
+      <Filter>Source Files\wifi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\settings.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\android\app\src\main\cpp\screen_layout.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\backends\imgui_impl_sdl3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="C:\Users\Antique\Downloads\tools\sdl\sdl3\lib\SDL3.dll">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+</Project>

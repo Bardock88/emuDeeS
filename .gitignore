@@ -1,0 +1,6 @@
+*.jks
+*.apk
+
+windows/.vs
+windows/emuDeeS/x64
+windows/x64

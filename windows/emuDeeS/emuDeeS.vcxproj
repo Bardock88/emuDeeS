@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{05be8838-4bd7-4794-bb7b-a1570a94275a}</ProjectGuid>
+    <RootNamespace>emuDeeS</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>D:\Storage\Windows 11 22H2\projects\source\repos\emuPlace\emuDeeS\android\app\src\main\cpp;C:\Users\Antique\Downloads\tools\imgui\backends;C:\Users\Antique\Downloads\tools\imgui;C:\Users\Antique\Downloads\tools\sdl\sdl3\include;C:\Users\Antique\Downloads\tools\unicorn\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Antique\Downloads\tools\sdl\sdl3\lib;C:\Users\Antique\Downloads\tools\unicorn\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;unicorn.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>D:\Storage\Windows 11 22H2\projects\source\repos\emuPlace\emuDeeS\android\app\src\main\cpp;C:\Users\Antique\Downloads\tools\imgui\backends;C:\Users\Antique\Downloads\tools\imgui;C:\Users\Antique\Downloads\tools\sdl\sdl3\include;C:\Users\Antique\Downloads\tools\unicorn\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Antique\Downloads\tools\sdl\sdl3\lib;C:\Users\Antique\Downloads\tools\unicorn\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;unicorn.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>D:\Storage\Windows 11 22H2\projects\source\repos\emuPlace\emuDeeS\android\app\src\main\cpp;C:\Users\Antique\Downloads\tools\imgui\backends;C:\Users\Antique\Downloads\tools\imgui;C:\Users\Antique\Downloads\tools\sdl\sdl3\include;C:\Users\Antique\Downloads\tools\unicorn\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Antique\Downloads\tools\sdl\sdl3\lib;C:\Users\Antique\Downloads\tools\unicorn\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;unicorn.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>D:\Storage\Windows 11 22H2\projects\source\repos\emuPlace\emuDeeS\android\app\src\main\cpp;C:\Users\Antique\Downloads\tools\imgui\backends;C:\Users\Antique\Downloads\tools\imgui;C:\Users\Antique\Downloads\tools\sdl\sdl3\include;C:\Users\Antique\Downloads\tools\unicorn\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Antique\Downloads\tools\sdl\sdl3\lib;C:\Users\Antique\Downloads\tools\unicorn\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;unicorn.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\android\app\src\main\cpp\bios.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\cartridge.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\core.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\cp15.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\div_sqrt.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\dldi.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\dma.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu_2d.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu_3d.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\gpu_3d_renderer.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\input.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter_alu.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter_branch.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\interpreter_transfer.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\ipc.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\memory.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\nds_icon.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\rtc.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\screen_layout.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\settings.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\spi.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\spu.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\timers.cpp" />
+    <ClCompile Include="..\..\android\app\src\main\cpp\wifi.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\backends\imgui_impl_sdl3.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_demo.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_tables.cpp" />
+    <ClCompile Include="C:\Users\Antique\Downloads\tools\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="emuDeeS.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="C:\Users\Antique\Downloads\tools\sdl\sdl3\lib\SDL3.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
