@@ -1,6 +1,9 @@
 #include <android/bitmap.h>
 #include <jni.h>
 #include <string>
+
+#include <aaudio/AAudio.h>
+
 #include <SLES/OpenSLES.h>
 #include <SLES/OpenSLES_Android.h>
 
@@ -103,8 +106,40 @@ Java_com_antique_emudees_GameBrowser_getGbaPath(JNIEnv *env, jclass clazz) {
  */
 
 // TODO: GameActivity.kt
+AAudioStreamBuilder* builder;
+AAudioStream *stream;
+
+aaudio_data_callback_result_t myCallback(AAudioStream *stream, void *userData, void *audioData, int32_t numFrames) {
+
+    uint32_t *original = core->spu.getSamples(699);
+
+    for (int i = 0; i < 1024; i++) {
+        uint32_t sample = original[i * 699 / 1024];
+        audioBuffer[i * 2 + 0] = sample >> 0;
+        audioBuffer[i * 2 + 1] = sample >> 16;
+    }
+
+    memcpy(audioData, audioBuffer, sizeof(audioBuffer));
+
+    return AAUDIO_CALLBACK_RESULT_CONTINUE;
+}
+
+
 extern "C" JNIEXPORT void JNICALL
 Java_com_antique_emudees_GameActivity_startAudio(JNIEnv *env, jobject object) {
+    memset(audioBuffer, 0, sizeof(audioBuffer));
+
+    AAudio_createStreamBuilder(&builder);
+    AAudioStreamBuilder_setFormat(builder, AAUDIO_FORMAT_PCM_I16);
+    AAudioStreamBuilder_setSampleRate(builder, 48000);
+    AAudioStreamBuilder_setChannelCount(builder, 2);
+
+    AAudioStreamBuilder_setDataCallback(builder, myCallback, nullptr);
+    AAudioStreamBuilder_openStream(builder, &stream);
+
+
+
+/*
     slCreateEngine(&audioEngineObj, 0, nullptr, 0, nullptr, nullptr);
     (*audioEngineObj)->Realize(audioEngineObj, SL_BOOLEAN_FALSE);
     (*audioEngineObj)->GetInterface(audioEngineObj, SL_IID_ENGINE, &audioEngine);
@@ -144,13 +179,16 @@ Java_com_antique_emudees_GameActivity_startAudio(JNIEnv *env, jobject object) {
     // Initiate playback with an empty buffer
     memset(audioBuffer, 0, sizeof(audioBuffer));
     (*audioBufferQueue)->Enqueue(audioBufferQueue, audioBuffer, sizeof(audioBuffer));
+    */
 }
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_antique_emudees_GameActivity_stopAudio(JNIEnv *env, jobject object) {
+    /*
     (*audioPlayerObj)->Destroy(audioPlayerObj);
     (*audioMixerObj)->Destroy(audioMixerObj);
     (*audioEngineObj)->Destroy(audioEngineObj);
+     */
 }
 
 extern "C" JNIEXPORT void JNICALL
@@ -305,7 +343,11 @@ Java_com_antique_emudees_Rom_getNDSIcon(JNIEnv *env, jobject jobject1, jstring j
 }
 
 extern "C" JNIEXPORT jstring JNICALL Java_com_antique_emudees_Rom_getRomName(JNIEnv* env, jobject jobject1, jstring jstring1) {
-    return env->NewStringUTF("");
+    const char *str = env->GetStringUTFChars(jstring1, nullptr);
+    nds_icon nds_icon(str);
+    env->ReleaseStringUTFChars(jstring1, str);
+
+    return env->NewStringUTF(nds_icon.GetTitle().c_str());
 }
 
 // TODO: SettingsMenu.kt
@@ -322,8 +364,8 @@ extern "C" JNIEXPORT void JNICALL Java_com_antique_emudees_SettingsMenu_setThrea
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_antique_emudees_SettingsMenu_setHighRes3D(JNIEnv *env, jobject object, jint int1) {
-    Settings::setHighRes3D(int1);
+Java_com_antique_emudees_SettingsMenu_setHighRes3D(JNIEnv *env, jobject object, jboolean jboolean1) {
+    Settings::setHighRes3D(jboolean1);
 }
 
 

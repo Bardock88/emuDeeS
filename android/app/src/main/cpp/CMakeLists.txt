@@ -34,4 +34,4 @@ add_library(emuDeeS SHARED
         timers.cpp
         wifi.cpp)
 
-target_link_libraries(emuDeeS jnigraphics OpenSLES)
+target_link_libraries(emuDeeS jnigraphics OpenSLES AAudio)
