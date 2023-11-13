@@ -1,5 +1,5 @@
 # emuDeeS
-Experimental Nintendo DS emulator based on [NooDS](https://github.com/hydr8gon/noods) and written in C++.
+Experimental Nintendo DS emulator based on [NooDS](https://github.com/hydr8gon/noods) and built by [Jarrod Norwell - jarrodnorwell(https://github.com/jarrodnorwell) written in C++.
 
 <span>
   <img src="https://img.shields.io/static/v1?label=Built%20with&message=C%2B%2B&color=blue"/>
